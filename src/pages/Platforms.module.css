@@ -1,0 +1,104 @@
+.platformsSection {
+    position: relative;
+    z-index: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 20px;
+    /* ✅ About/Contact과 동일한 상하 여백 */
+    font-family: 'Noto Sans KR', sans-serif;
+    line-height: 1.8;
+    text-align: center;
+}
+
+.platformsSection h1 {
+    font-size: 2.0rem;
+    /* ✅ About h1과 동일 */
+    margin: 0 0 20px;
+    text-align: center;
+    color: #2E7D32;
+    /* ✅ 초록 포인트 */
+    font-weight: 700;
+    position: relative;
+}
+
+.platformsSection h1::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, #4CAF50, #81C784);
+    margin: 15px auto 0;
+    border-radius: 2px;
+}
+
+.subtitle {
+    color: #555;
+    margin-bottom: 60px;
+    font-size: 1.1rem;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: #ffffffcc;
+    border: 1px solid #C8E6C9;
+    border-radius: 16px;
+    padding: 40px 30px;
+    width: 280px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    backdrop-filter: blur(4px);
+    /* ✅ About/Contact과 동일한 느낌 */
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+    background: #F1F8E9;
+}
+
+.card h2 {
+    font-size: 1.4rem;
+    margin-bottom: 8px;
+    color: #1B5E20;
+    font-weight: 600;
+}
+
+.date {
+    display: block;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #4CAF50;
+    margin-bottom: 20px;
+}
+
+.soon {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #E64A19;
+    /* 주황색 포인트 */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+@media (max-width: 768px) {
+    .platformsSection {
+        padding: 60px 15px;
+    }
+
+    .cards {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 340px;
+    }
+}
