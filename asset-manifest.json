@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/static/css/main.0db49584.css",
+    "main.js": "/static/js/main.2847f4b6.js",
+    "static/js/787.589d1196.chunk.js": "/static/js/787.589d1196.chunk.js",
+    "static/media/about-bg.jpg": "/static/media/about-bg.75ffacec61754486e857.jpg",
+    "static/media/logo_wh (2).png": "/static/media/logo_wh (2).ee85f3810da483b6de2e.png",
+    "static/media/symbol_bk.png": "/static/media/symbol_bk.307ba5b034649c0cebb5.png",
+    "index.html": "/index.html",
+    "main.0db49584.css.map": "/static/css/main.0db49584.css.map",
+    "main.2847f4b6.js.map": "/static/js/main.2847f4b6.js.map",
+    "787.589d1196.chunk.js.map": "/static/js/787.589d1196.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0db49584.css",
+    "static/js/main.2847f4b6.js"
+  ]
+}
