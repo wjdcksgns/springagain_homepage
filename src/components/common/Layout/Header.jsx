@@ -41,7 +41,7 @@ const Header = () => {
           <div className={styles.contents}>
             <h1 className={styles.logo}>
               <Link to="/">
-                헤이파밍 HEYFARMING
+                다시봄
               </Link>
             </h1>
             {/* 데스크톱 메뉴 */}

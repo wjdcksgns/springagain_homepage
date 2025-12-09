@@ -34,7 +34,7 @@ const Footer = () => {
           <div className={styles.contents}>
             <div className={styles.logo}>
               <h2>
-                헤이파밍 HEYFARMING
+                다시봄
               </h2>
             </div>
             <div className={styles.info}>
