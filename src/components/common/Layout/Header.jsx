@@ -54,7 +54,7 @@ const Header = () => {
                 <Link to="/platforms">플랫폼</Link>
                 <Link to="/news">활동소식</Link>
                 <Link to="/contact">Contact</Link>
-                <Link to="/privacy">개인정보처리방침</Link>
+
                 <Users />
               </nav>
             ) : (
@@ -69,7 +69,7 @@ const Header = () => {
                   <Link to="/platforms">플랫폼</Link>
                   <Link to="/news">활동소식</Link>
                   <Link to="/contact">Contact</Link>
-                  <Link to="/privacy">개인정보처리방침</Link>
+
                 </nav>
               </MobileNav>
             )}
