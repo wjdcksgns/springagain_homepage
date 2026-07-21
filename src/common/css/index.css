@@ -1,82 +1,65 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css');
 
+/* 라이트 미니멀 디자인 토큰. 브레이크포인트는 1024 / 768 / 480 3단으로 통일
+   (1024는 Header의 windowWidth > 1024 JS 분기와 일치) */
 :root {
-  --color-bk: #191919;
-  --color-wh: #fff;
-  --color-dark-wh: #eee;
-  --color-lighter-gy: #ddd;
-  --color-light-gy: #e5e7eb;
-  --color-gy: #6a6a6a;
-  --color-dark-gy: #2b2b2b;
-  --color-lighter-pk: #ff8cc9;
-  --color-light-pk: #ff5798;
-  --color-pk: #e6006a;
-  --color-rd: #EB1D36;
-  --color-or: #FFBB00;
-  --color-yl: #FFE400;
-  --color-gn: #1DDB16;
-  --color-bl: #0054FF;
-  --color-nv: #050099;
-  --color-dark-nv: #040d21;
-  --color-pr: #5F00FF;
-  --color-sb: #ACEBFF;
-  --alpha-wh-0: rgba(255, 255, 255, .0);
-  --alpha-wh-1: rgba(255, 255, 255, .1);
-  --alpha-wh-3: rgba(255, 255, 255, .3);
-  --alpha-wh-5: rgba(255, 255, 255, .5);
-  --alpha-wh-7: rgba(255, 255, 255, .7);
-  --alpha-wh-9: rgba(255, 255, 255, .9);
-  --alpha-bk-0: rgba(0, 0, 0, 0);
-  --alpha-bk-1: rgba(0, 0, 0, .1);
-  --alpha-bk-3: rgba(0, 0, 0, .3);
-  --alpha-bk-5: rgba(0, 0, 0, .5);
-  --alpha-bk-7: rgba(0, 0, 0, .7);
-  --alpha-bk-9: rgba(0, 0, 0, .9);
-  --gradient-all-to-right: linear-gradient(to right, #ef9a9a, #f48fb1, #ce93d8, #b39ddb, #9fa8da, #90caf9, #81d4fa, #80deea, #80cbc4, #a5d6a7, #c5e1a5, #e6ee9c, #fff59d, #ffe082, #ffcc80, #ffab91);
-  --gradient-pk-to-right: linear-gradient(to right, var(--color-lighter-pk), var(--color-light-pk), var(--color-pk));
-  --gradient-rainbow-conic: conic-gradient(#FF0000, #FF5E00, #FFBB00, #FFE400, #ABF200, #1DDB16, #00D8FF, #0054FF, #0100FF, #5F00FF, #FF00DD, #FF007F);
+  /* color */
+  --color-bg: #ffffff;
+  --color-surface: #f7f8fa;
+  --color-text: #111827;
+  --color-text-sub: #6b7280;
+  --color-border: #e5e7eb;
+  --color-accent: #2563eb;
+  --color-accent-dark: #1d4ed8;
+  --color-accent-soft: #eff6ff;
+
+  /* typography */
+  --font-family: 'Pretendard Variable', Pretendard, 'Noto Sans KR', -apple-system, sans-serif;
+  --fs-hero: clamp(2rem, 5vw, 3.25rem);
+  --fs-h2: clamp(1.5rem, 3vw, 2rem);
+  --fs-h3: 1.25rem;
+  --fs-body: 1rem;
+  --fs-sm: 0.875rem;
+
+  /* spacing / shape */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 16px;
+  --space-4: 24px;
+  --space-5: 40px;
+  --space-6: 64px;
+  --space-7: 96px;
+  --radius: 12px;
+  --radius-sm: 8px;
+  --maxw: 1140px;
+  --shadow-card: 0 1px 3px rgba(17, 24, 39, 0.06), 0 4px 16px rgba(17, 24, 39, 0.06);
 }
 
 body {
   font-weight: 400;
   font-size: 16px;
-  line-height: 1.4;
-  font-family: 'Noto Sans KR', sans-serif;
-  background: var(--color-light-gy);
+  line-height: 1.6;
+  font-family: var(--font-family);
+  color: var(--color-text);
+  background: var(--color-bg);
   padding: 0 !important;
 }
 
 ::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
+  width: 8px;
+  height: 8px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: var(--color-light-pk);
-  border-radius: 3px;
+  background-color: var(--color-border);
+  border-radius: 4px;
 }
 
 ::-webkit-scrollbar-track {
-  background-color: var(--color-wh);
-  border-radius: 3px;
+  background-color: transparent;
 }
 
 ::selection {
-  background-color: var(--color-dark-gy);
-  color: var(--color-lighter-pk);
-}
-
-body::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
-}
-
-body::-webkit-scrollbar-thumb {
-  background-color: var(--color-light-pk);
-  border-radius: 10px;
-}
-
-body::-webkit-scrollbar-track {
-  background-color: var(--color-bk);
-  border-radius: 0;
+  background-color: var(--color-accent-soft);
+  color: var(--color-accent-dark);
 }
