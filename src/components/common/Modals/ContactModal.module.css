@@ -35,7 +35,7 @@
     display: block;
     width: 40px;
     height: 3px;
-    background: #6a11cb;
+    background: var(--color-accent);
     /* 포인트 컬러 */
     margin: 10px auto 0;
     border-radius: 2px;
@@ -54,8 +54,8 @@
 
 .form input:focus,
 .form textarea:focus {
-    border-color: #6a11cb;
-    box-shadow: 0 0 0 3px rgba(106, 17, 203, 0.15);
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 3px var(--color-accent-soft);
     outline: none;
 }
 
@@ -75,13 +75,13 @@
 }
 
 .actions button[type="submit"] {
-    background: #6a11cb;
+    background: var(--color-accent);
     color: #fff;
     transition: background 0.2s;
 }
 
 .actions button[type="submit"]:hover {
-    background: #501199;
+    background: var(--color-accent-dark);
 }
 
 .actions button[type="button"] {
