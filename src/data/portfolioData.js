@@ -1,0 +1,60 @@
+export const portfolioData = [
+  {
+    id: 'face',
+    title: 'AI 안면인식 솔루션',
+    category: 'AI · 컴퓨터 비전',
+    description: `실시간 안면인식으로 방문 이력과 증상·처방 정보를 통합 관리하는 스마트 헬스케어/보안 솔루션입니다.`,
+    features: [
+      '비마커 기반 실시간 얼굴 인식으로 자연스러운 식별',
+      '방문·증상·처방 이력 통합 조회 및 시각화(약사/관리자 화면)',
+      '폐쇄망(Local Network)·암호화 등 개인정보 보호 강화',
+      '데이터 기반 맞춤 상담/추천 등 서비스 확장 지원',
+    ],
+    images: [
+      '/assets/images/portfolio/face_1.png',
+      '/assets/images/portfolio/face_2.png',
+      '/assets/images/portfolio/face_3.png',
+    ],
+  },
+  {
+    id: 'rhythm',
+    title: '슈퍼리듬스타 (Android)',
+    category: '모바일 게임',
+    description: `귀여운 도트 캐릭터와 스토리 진행이 결합된 리듬 액션 게임. 다양한 음악 장르와 손맛 나는 타격감으로 색다른 재미를 제공합니다.`,
+    features: [
+      "'ONE! TWO! THREE! GO!' 큐에 맞춘 타이밍 플레이",
+      '스토리 × 리듬의 색다른 진행',
+      '다채로운 음악 장르와 그래픽/사운드 이펙트',
+      '리더보드로 점수 경쟁 및 친구와 순위 비교',
+    ],
+    images: [
+      '/assets/images/portfolio/rhythm_1.jpg',
+      '/assets/images/portfolio/rhythm_2.jpg',
+      '/assets/images/portfolio/rhythm_3.png',
+      '/assets/images/portfolio/rhythm_4.jpg',
+      '/assets/images/portfolio/rhythm_5.jpg',
+      '/assets/images/portfolio/rhythm_6.jpg',
+      '/assets/images/portfolio/rhythm_7.jpg',
+      '/assets/images/portfolio/rhythm_8.png',
+      '/assets/images/portfolio/rhythm_9.jpg',
+    ],
+  },
+  {
+    id: 'ar',
+    title: 'AR 원격협업 플랫폼',
+    category: 'AR · IoT',
+    description: `AI와 IoT 기반의 AR 원격협업 플랫폼. 실시간 영상·음성 스트리밍과 2D/3D 모델링 시뮬레이션을 통해 현장 인력과 원격 전문가가 협력할 수 있도록 지원합니다.`,
+    features: [
+      '다자간 비대면 원격 협업 지원 (WebRTC 기반 영상/음성 스트리밍)',
+      '2D/3D 모델링 및 시뮬레이션을 통한 직관적 협업 지원',
+      'IoT 데이터 연동으로 실시간 현장 정보 제공',
+      '현장 인력과 전문가 간 음성·영상·AR 모델·파일 공유 가능',
+    ],
+    images: [
+      '/assets/images/portfolio/ar_1.png',
+      '/assets/images/portfolio/ar_2.png',
+      '/assets/images/portfolio/ar_3.png',
+      '/assets/images/portfolio/ar_4.png',
+    ],
+  },
+];
