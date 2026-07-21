@@ -57,10 +57,14 @@ const Main = () => {
             <h2 className={styles.sectionTitle}>Portfolio</h2>
             <p className={styles.sectionSub}>현장에서 검증된 프로젝트</p>
             <div className={styles.portfolioGrid}>
-              {portfolioData.map((proj) => (
+              {portfolioData.slice(0, 3).map((proj) => (
                 <Link to="/portfolio" key={proj.id} className={styles.portfolioCard}>
                   <div className={styles.portfolioThumb}>
-                    <img src={proj.images[0]} alt={proj.title} loading="lazy" />
+                    {proj.images.length > 0 ? (
+                      <img src={proj.images[0]} alt={proj.title} loading="lazy" />
+                    ) : (
+                      <div className={styles.thumbPlaceholder}>HeyFarming</div>
+                    )}
                   </div>
                   <span className={styles.portfolioCategory}>{proj.category}</span>
                   <h3>{proj.title}</h3>

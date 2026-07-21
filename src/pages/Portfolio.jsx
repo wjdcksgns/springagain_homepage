@@ -33,18 +33,25 @@ function Portfolio() {
           <div className={styles.list}>
             {portfolioData.map((proj) => (
               <div key={proj.id} className={styles.card}>
-                <div className={styles.imageWrapper}>
-                  <img src={proj.images[0]} alt={proj.title} loading="lazy" />
-                  <button
-                    className={styles.moreBtn}
-                    onClick={() => {
-                      setSelectedProject(proj);
-                      setCurrentIndex(0);
-                    }}
-                  >
-                    더보기
-                  </button>
-                </div>
+                {proj.images.length > 0 ? (
+                  <div className={styles.imageWrapper}>
+                    <img src={proj.images[0]} alt={proj.title} loading="lazy" />
+                    <button
+                      className={styles.moreBtn}
+                      onClick={() => {
+                        setSelectedProject(proj);
+                        setCurrentIndex(0);
+                      }}
+                    >
+                      더보기
+                    </button>
+                  </div>
+                ) : (
+                  <div className={`${styles.imageWrapper} ${styles.thumbPlaceholder}`}>
+                    <strong>HeyFarming</strong>
+                    <span>앱 스크린샷 준비 중</span>
+                  </div>
+                )}
                 <div className={styles.textWrapper}>
                   <span className={styles.category}>{proj.category}</span>
                   <h3>{proj.title}</h3>

@@ -3,19 +3,19 @@ import {
   FaLaptopCode, FaSeedling, FaHandshake, FaMicrophone, FaChartLine, FaBug, FaStore,
 } from 'react-icons/fa';
 
-// 사업영역 3축 — IT가 첫 번째, 농업은 그중 하나 (260720 회의록 포지셔닝)
+// 사업영역 3축 (순서: 스마트팜 → AI → 외주, 260721 지시)
 export const businessAreas = [
-  {
-    id: 'it',
-    title: 'AI · 소프트웨어 개발',
-    summary: 'AI, 컴퓨터 비전, AR/VR, 모바일 앱까지 — 산업 현장의 문제를 소프트웨어로 해결합니다.',
-    icon: FaLaptopCode,
-  },
   {
     id: 'heyfarming',
     title: '스마트팜 플랫폼 헤이파밍',
     summary: '음성 영농일지, AI 수확량 예측, 예약거래까지 — 농업 현장을 위한 통합 플랫폼을 만듭니다.',
     icon: FaSeedling,
+  },
+  {
+    id: 'it',
+    title: 'AI · 소프트웨어 개발',
+    summary: 'AI, 컴퓨터 비전, AR/VR, 모바일 앱까지 — 산업 현장의 문제를 소프트웨어로 해결합니다.',
+    icon: FaLaptopCode,
   },
   {
     id: 'outsourcing',

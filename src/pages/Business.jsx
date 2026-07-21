@@ -28,26 +28,6 @@ const Business = () => {
             ))}
           </div>
 
-          {/* IT 솔루션 */}
-          <div id="it" className={styles.block}>
-            <h2 className={styles.blockTitle}>AI · 소프트웨어 개발</h2>
-            <p className={styles.blockSub}>다시봄이 보유한 핵심 기술과 적용 분야입니다.</p>
-            <div className={styles.techGrid}>
-              {techList.map(({ title, description, fields, icon: Icon }) => (
-                <div key={title} className={styles.techCard}>
-                  <div className={styles.techIcon}><Icon /></div>
-                  <h3>{title}</h3>
-                  <p>{description}</p>
-                  <div className={styles.tags}>
-                    {fields.map((field) => (
-                      <span key={field} className={styles.tag}>{field}</span>
-                    ))}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
           {/* 헤이파밍 */}
           <div id="heyfarming" className={styles.block}>
             <h2 className={styles.blockTitle}>스마트팜 플랫폼 헤이파밍</h2>
@@ -63,6 +43,26 @@ const Business = () => {
                     {comingSoon && <span className={styles.soonBadge}>Coming Soon</span>}
                   </h3>
                   <p>{description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* IT 솔루션 */}
+          <div id="it" className={styles.block}>
+            <h2 className={styles.blockTitle}>AI · 소프트웨어 개발</h2>
+            <p className={styles.blockSub}>다시봄이 보유한 핵심 기술과 적용 분야입니다.</p>
+            <div className={styles.techGrid}>
+              {techList.map(({ title, description, fields, icon: Icon }) => (
+                <div key={title} className={styles.techCard}>
+                  <div className={styles.techIcon}><Icon /></div>
+                  <h3>{title}</h3>
+                  <p>{description}</p>
+                  <div className={styles.tags}>
+                    {fields.map((field) => (
+                      <span key={field} className={styles.tag}>{field}</span>
+                    ))}
+                  </div>
                 </div>
               ))}
             </div>
