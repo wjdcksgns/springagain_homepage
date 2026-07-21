@@ -20,8 +20,11 @@ const Footer = () => {
         <div className="container">
           <div className={styles.contents}>
             <div className={styles.logo}>
-              <h2>다시봄<span className={styles.logoDot}>.</span></h2>
-              <p>IT 기술로 산업의 문제를 해결합니다</p>
+              <img src="/favicon.png" alt="다시봄 로고" className={styles.logoImg} />
+              <div>
+                <h2>다시봄<span className={styles.logoDot}>.</span></h2>
+                <p>IT 기술로 산업의 문제를 해결합니다</p>
+              </div>
             </div>
             <div className={styles.info}>
               <address className={styles.contact}>

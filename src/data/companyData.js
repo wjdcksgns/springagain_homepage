@@ -28,6 +28,10 @@ export const teamList = [
     role: 'AI 엔지니어',
     description: 'AI 알고리즘 개발 5년 경력 — LLM/AI Agent, Transformer·CNN·LSTM 기반 모델 구현',
   },
+  {
+    role: 'AI/SW 엔지니어',
+    description: 'AI 데이터 전처리·후처리 및 서비스 적용 — 헤이파밍 플랫폼(앱·웹·서버) 개발',
+  },
 ];
 
 export const partners = [
