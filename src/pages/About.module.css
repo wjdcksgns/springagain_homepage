@@ -1,119 +1,174 @@
-.aboutSection {
-  position: relative;
-  width: 100%;
-  background-image: url('../assets/images/about-bg.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+.hero h1 {
+  font-size: var(--fs-h2);
+  font-weight: 800;
+  letter-spacing: -0.02em;
 }
 
-.aboutSection::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(4px);
-  /* ✅ 약간 흐림 효과 */
-  z-index: 0;
-}
-
-.aboutWrap {
-  position: relative;
-  z-index: 1;
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 80px 20px;
-  font-family: 'Noto Sans KR', sans-serif;
+.hero p {
+  margin-top: var(--space-3);
+  max-width: 720px;
+  color: var(--color-text-sub);
   line-height: 1.8;
 }
 
-.aboutWrap h1 {
-  font-size: 2.0rem;
-  margin: 0 0 30px;
-  text-align: center;
-  color: #2E7D32;
+.hero strong {
+  color: var(--color-text);
+}
+
+.block {
+  margin-top: var(--space-6);
+}
+
+.blockTitle {
+  font-size: var(--fs-h3);
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  color: var(--color-accent);
+  margin-bottom: var(--space-4);
+}
+
+/* CEO */
+.ceoCard {
+  padding: var(--space-5);
+  background: var(--color-surface);
+  border-radius: var(--radius);
+}
+
+.ceoName strong {
+  font-size: var(--fs-h3);
   font-weight: 700;
+}
+
+.ceoName span {
+  margin-left: var(--space-2);
+  font-size: var(--fs-sm);
+  color: var(--color-text-sub);
+}
+
+.ceoMessage {
+  margin-top: var(--space-3);
+  color: var(--color-text-sub);
+  line-height: 1.8;
+  white-space: pre-line;
+}
+
+/* Team */
+.teamList {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-4);
+}
+
+.teamCard {
+  padding: var(--space-4);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+}
+
+.teamCard h3 {
+  font-weight: 700;
+  margin-bottom: var(--space-2);
+}
+
+.teamCard p {
+  font-size: var(--fs-sm);
+  color: var(--color-text-sub);
+  line-height: 1.6;
+}
+
+/* History */
+.timeline {
+  border-left: 2px solid var(--color-border);
+  padding-left: var(--space-4);
+}
+
+.timelineItem {
   position: relative;
+  padding-bottom: var(--space-4);
 }
 
-.aboutWrap h1::after {
-  content: "";
-  display: block;
-  width: 60px;
-  height: 4px;
-  background: linear-gradient(90deg, #4CAF50, #81C784);
-  margin: 15px auto 0;
-  border-radius: 2px;
+.timelineItem::before {
+  content: '';
+  position: absolute;
+  left: calc(-1 * var(--space-4) - 6px);
+  top: 8px;
+  width: 10px;
+  height: 10px;
+  background: var(--color-accent);
+  border-radius: 50%;
 }
 
-.aboutWrap h2 {
-  font-size: 1.8rem;
-  margin: 50px 0 20px;
-  padding-left: 12px;
-  border-left: 5px solid #4CAF50;
-  color: #1B5E20;
-  font-weight: 600;
+.timelineYear {
+  font-weight: 800;
+  font-size: var(--fs-h3);
+  margin-bottom: var(--space-2);
 }
 
-.aboutWrap p {
-  font-size: 1.1rem;
-  color: #444;
-  margin-bottom: 20px;
+.timelineEvents li {
+  position: relative;
+  padding-left: 14px;
+  margin-bottom: var(--space-1);
+  color: var(--color-text-sub);
+  font-size: var(--fs-sm);
+  line-height: 1.6;
 }
 
-.team ul {
-  list-style: none;
-  padding: 0;
+.timelineEvents li::before {
+  content: '·';
+  position: absolute;
+  left: 0;
+  color: var(--color-accent);
+  font-weight: 700;
 }
 
-.team li {
-  background: #ffffffcc;
-  border: 1px solid #C8E6C9;
-  border-radius: 12px;
-  padding: 25px;
-  margin-bottom: 25px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+/* Partners */
+.partnerList {
+  display: grid;
+  gap: var(--space-4);
 }
 
-.team li:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
-  background: #F1F8E9;
+.partnerCard {
+  padding: var(--space-4);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
 }
 
-.team h3 {
-  margin-bottom: 10px;
-  color: #2E7D32;
-  font-weight: 600;
-  font-size: 1.2rem;
-}
-
-/* 협력사 버튼 */
-.partnerItem {
+.partnerCard h3 {
   display: flex;
-  flex-direction: column;
-  gap: 10px;
+  align-items: center;
+  gap: var(--space-3);
+  font-weight: 700;
+  margin-bottom: var(--space-2);
 }
 
 .partnerBtn {
-  align-self: flex-start;
-  margin-left: 12px;
-  display: inline-block;
-  padding: 8px 16px;
-  background: linear-gradient(90deg, #4CAF50, #81C784);
-  color: #fff;
-  font-size: 0.95rem;
+  padding: 4px 12px;
+  font-size: var(--fs-sm);
   font-weight: 600;
-  border-radius: 20px;
-  text-decoration: none;
-  transition: background 0.3s ease, transform 0.2s ease;
+  color: var(--color-accent);
+  border: 1px solid var(--color-accent);
+  border-radius: 999px;
+  transition: background .2s, color .2s;
 }
 
 .partnerBtn:hover {
-  background: linear-gradient(90deg, #43A047, #66BB6A);
-  transform: translateY(-2px);
+  background: var(--color-accent);
+  color: #fff;
+}
+
+.partnerCard p {
+  font-size: var(--fs-sm);
+  color: var(--color-text-sub);
+  line-height: 1.6;
+}
+
+/* responsive */
+@media all and (max-width: 768px) {
+  .teamList {
+    grid-template-columns: 1fr;
+  }
+
+  .block {
+    margin-top: var(--space-5);
+  }
 }

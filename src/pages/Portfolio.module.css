@@ -1,267 +1,217 @@
-.portfolio {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 100px 20px;
-}
-
-.hero {
-  text-align: center;
-  margin-bottom: 60px;
-}
-
-.hero h2 {
-  font-size: 2rem;
-  font-weight: 700;
-  margin-bottom: 10px;
-  position: relative;
-}
-
-.hero h2::after {
-  content: "";
-  display: block;
-  width: 60px;
-  height: 3px;
-  background: #007bff;
-  margin: 15px auto 0;
+.hero h1 {
+  font-size: var(--fs-h2);
+  font-weight: 800;
+  letter-spacing: -0.02em;
 }
 
 .hero p {
-  color: #555;
-  font-size: 1.1rem;
+  margin-top: var(--space-2);
+  color: var(--color-text-sub);
 }
 
 .list {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: var(--space-5);
+  margin-top: var(--space-5);
 }
 
 .card {
-  display: flex;
-  align-items: center;
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  overflow: hidden;
-  transition: transform 0.2s;
-}
-
-.card:hover {
-  transform: translateY(-5px);
+  display: grid;
+  grid-template-columns: 5fr 6fr;
+  gap: var(--space-5);
+  align-items: start;
+  padding: var(--space-5);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  background: var(--color-bg);
 }
 
 .imageWrapper {
-  flex: 1;
-  min-width: 40%;
   position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
 }
 
 .imageWrapper img {
   width: 100%;
-  height: 100%;
+  display: block;
+  aspect-ratio: 16 / 10;
   object-fit: cover;
-}
-
-.textWrapper {
-  flex: 1;
-  padding: 30px;
-}
-
-.textWrapper h3 {
-  font-size: 1.5rem;
-  margin-bottom: 15px;
-  color: #222;
-}
-
-.textWrapper p {
-  font-size: 1rem;
-  color: #555;
-  line-height: 1.7;
-  margin-bottom: 10px;
-  white-space: pre-line;
-  /* 줄바꿈 인식 */
-}
-
-.textWrapper p::before {
-  content: "✔ ";
-  color: #007bff;
-  font-weight: bold;
 }
 
 .moreBtn {
   position: absolute;
-  bottom: 12px;
-  right: 12px;
-  padding: 8px 14px;
-  background: rgba(0, 123, 255, 0.9);
-  color: #fff;
-  border: none;
-  border-radius: 6px;
-  font-size: 0.9rem;
-  cursor: pointer;
-  transition: background 0.2s;
+  right: var(--space-3);
+  bottom: var(--space-3);
+  padding: 8px 18px;
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  color: var(--color-text);
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  transition: color .2s, border-color .2s;
 }
 
 .moreBtn:hover {
-  background: rgba(0, 86, 179, 0.95);
+  color: var(--color-accent);
+  border-color: var(--color-accent);
 }
 
-/* ===== 모달 슬라이드 ===== */
+.category {
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  color: var(--color-accent);
+}
+
+.textWrapper h3 {
+  margin: var(--space-1) 0 var(--space-3);
+  font-size: var(--fs-h3);
+  font-weight: 700;
+}
+
+.textWrapper > p {
+  color: var(--color-text-sub);
+  line-height: 1.7;
+  margin-bottom: var(--space-3);
+}
+
+.features li {
+  position: relative;
+  padding-left: 14px;
+  margin-bottom: var(--space-1);
+  font-size: var(--fs-sm);
+  color: var(--color-text-sub);
+  line-height: 1.6;
+}
+
+.features li::before {
+  content: '·';
+  position: absolute;
+  left: 0;
+  color: var(--color-accent);
+  font-weight: 700;
+}
+
+/* 이미지 모달 */
 .modalOverlay {
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.7);
+  inset: 0;
   display: flex;
-  justify-content: center;
   align-items: center;
-  z-index: 5000;
+  justify-content: center;
+  background: rgba(17, 24, 39, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 400;
+  padding: var(--space-3);
 }
 
 .modal {
-  background: #fff;
-  padding: 30px;
-  border-radius: 12px;
-  max-width: 900px;
-  width: 90%;
+  width: min(880px, 100%);
   max-height: 90vh;
-  overflow: hidden;
-  animation: fadeIn 0.2s ease-in-out;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  overflow: auto;
+  padding: var(--space-5);
+  background: var(--color-bg);
+  border-radius: var(--radius);
+  text-align: center;
 }
 
 .modal h3 {
-  margin-bottom: 20px;
-  font-size: 1.4rem;
-  color: #222;
-  text-align: center;
+  font-size: var(--fs-h3);
+  font-weight: 700;
+  margin-bottom: var(--space-4);
 }
 
 .slider {
   position: relative;
   display: flex;
-  justify-content: center;
   align-items: center;
-  width: 100%;
+  justify-content: center;
 }
 
 .slideImage {
   max-width: 100%;
-  max-height: 500px;
-  border-radius: 8px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  max-height: 60vh;
   object-fit: contain;
+  border-radius: var(--radius-sm);
 }
 
-/* 좌우 버튼을 이미지 위에 고정 */
 .navBtn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.5);
-  border: none;
-  color: #fff;
-  font-size: 1.8rem;
-  width: 48px;
-  height: 48px;
+  width: 40px;
+  height: 40px;
+  font-size: 1rem;
+  color: var(--color-text);
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid var(--color-border);
   border-radius: 50%;
-  cursor: pointer;
-  transition: background 0.2s;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 10;
+  transition: color .2s, border-color .2s;
 }
 
 .navBtn:hover {
-  background: rgba(0, 0, 0, 0.8);
+  color: var(--color-accent);
+  border-color: var(--color-accent);
 }
 
-/* 왼쪽 버튼 */
-.navBtn.left {
-  left: 20px;
+.left {
+  left: var(--space-2);
 }
 
-/* 오른쪽 버튼 */
-.navBtn.right {
-  right: 20px;
+.right {
+  right: var(--space-2);
 }
 
 .counter {
-  text-align: center;
-  margin-top: 10px;
-  font-size: 0.9rem;
-  color: #666;
+  margin-top: var(--space-3);
+  font-size: var(--fs-sm);
+  color: var(--color-text-sub);
 }
 
 .closeBtn {
-  margin-top: 20px;
-  padding: 8px 16px;
-  background: #444;
-  color: #fff;
-  border: none;
-  border-radius: 6px;
-  font-size: 0.9rem;
-  cursor: pointer;
+  margin-top: var(--space-3);
+  padding: 10px 24px;
+  font-weight: 600;
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  transition: color .2s, border-color .2s;
 }
 
 .closeBtn:hover {
-  background: #222;
+  color: var(--color-accent);
+  border-color: var(--color-accent);
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: scale(0.95);
-  }
-
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-/* 반응형 */
-@media all and (max-width: 768px) {
-  .card {
-    flex-direction: column;
-  }
-
-  .imageWrapper {
-    width: 100%;
-  }
-
-  .textWrapper {
-    padding: 20px;
-  }
-
-  .slideImage {
-    max-height: 300px;
-  }
-}
-
+/* 문의 */
 .contactBox {
+  margin-top: var(--space-6);
   text-align: center;
-  margin-top: 60px;
 }
 
 .contactBtn {
-  padding: 12px 28px;
-  background: linear-gradient(135deg, #6a11cb, #2575fc);
-  color: #fff;
-  font-size: 1rem;
+  padding: 14px 28px;
   font-weight: 600;
-  border: none;
-  border-radius: 30px;
-  cursor: pointer;
-  transition: transform 0.2s, box-shadow 0.2s;
+  font-size: var(--fs-body);
+  color: #fff;
+  background: var(--color-accent);
+  border-radius: var(--radius-sm);
+  transition: background .2s;
 }
 
 .contactBtn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  background: var(--color-accent-dark);
+}
+
+/* responsive */
+@media all and (max-width: 768px) {
+  .card {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+    padding: var(--space-4);
+  }
 }

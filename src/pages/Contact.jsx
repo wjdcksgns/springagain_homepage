@@ -1,12 +1,13 @@
 import styles from "./Contact.module.css";
 import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
+import { companyInfo } from "../data/companyData";
 
 function Contact() {
   return (
     <section className={styles.contact}>
       <div className={styles.hero}>
-        <h2>Contact Us</h2>
-        <p>다시봄은 여러분과 함께 농업의 디지털화를 선도하겠습니다.</p>
+        <h1>Contact Us</h1>
+        <p>프로젝트 의뢰, 협업 제안, 어떤 이야기든 환영합니다.</p>
       </div>
 
       <div className={styles.container}>
@@ -25,18 +26,22 @@ function Contact() {
 
         {/* 회사 정보 */}
         <div className={styles.info}>
-          <h3>다시봄</h3>
+          <h3>{companyInfo.name}</h3>
           <div className={styles.infoItem}>
             <FaMapMarkerAlt className={styles.infoIcon} />
-            <span>경기도 수원시 영통구 광교산로 154-42, 경기대학교 창업보육센터 408호</span>
+            <span>{companyInfo.address}</span>
           </div>
           <div className={styles.infoItem}>
             <FaPhoneAlt className={styles.infoIcon} />
-            <span>010-2868-0655</span>
+            <span>{companyInfo.phone}</span>
           </div>
           <div className={styles.infoItem}>
             <FaEnvelope className={styles.infoIcon} />
-            <span>springagain2025@gmail.com<br></br>diksik2001@gmail.com</span>
+            <span>
+              {companyInfo.emails.map((email) => (
+                <span key={email} className={styles.email}>{email}</span>
+              ))}
+            </span>
           </div>
         </div>
       </div>
