@@ -48,3 +48,7 @@ yarn-error.log*
 
 server/
 node_modules/
+
+# Local Files
+_local_docs/
+.claude/
