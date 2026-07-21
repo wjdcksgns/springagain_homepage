@@ -1,5 +1,32 @@
 export const portfolioData = [
   {
+    id: 'heyfarming',
+    title: '스마트팜 플랫폼 헤이파밍 (HeyFarming)',
+    category: '자사 서비스 · 스마트팜',
+    description: `농업 현장을 위한 통합 플랫폼. 영농일지 기록부터 AI 예측, 거래까지 앱 하나로 해결하는 다시봄의 자사 서비스입니다.`,
+    features: [
+      '음성으로 기록하면 AI가 정리하는 음성 영농일지',
+      '작물·환경 데이터 기반 AI 수확량 예측',
+      '사진 한 장으로 진단하는 AI 병해충 진단',
+      '농가와 소비자를 직접 연결하는 예약거래 플랫폼 (Coming Soon)',
+    ],
+    images: [
+      '/assets/images/portfolio/heyfarming/hf_banner.png',
+      '/assets/images/portfolio/heyfarming/hf_01.png',
+      '/assets/images/portfolio/heyfarming/hf_02.png',
+      '/assets/images/portfolio/heyfarming/hf_03.png',
+      '/assets/images/portfolio/heyfarming/hf_04.png',
+      '/assets/images/portfolio/heyfarming/hf_05.png',
+      '/assets/images/portfolio/heyfarming/hf_06.png',
+      '/assets/images/portfolio/heyfarming/hf_07.jpg',
+      '/assets/images/portfolio/heyfarming/hf_08.jpg',
+      '/assets/images/portfolio/heyfarming/hf_09.jpg',
+      '/assets/images/portfolio/heyfarming/hf_10.jpg',
+      '/assets/images/portfolio/heyfarming/hf_11.jpg',
+      '/assets/images/portfolio/heyfarming/hf_12.jpg',
+    ],
+  },
+  {
     id: 'face',
     title: 'AI 안면인식 솔루션',
     category: 'AI · 컴퓨터 비전',
