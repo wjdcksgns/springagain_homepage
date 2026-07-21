@@ -1,6 +1,6 @@
 {
-  "short_name": "Meta Space",
-  "name": "Meta Space",
+  "short_name": "다시봄",
+  "name": "다시봄 (Spring Again)",
   "icons": [
     {
       "src": "favicon_152.png",
@@ -20,9 +20,9 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
+  "theme_color": "#ffffff",
   "background_color": "#ffffff",
-  "description": "메타오토러닝에 오셔서 새로운 인공지능을 경험하고 새로운 세상을 만들어보세요.",
+  "description": "다시봄(Spring Again)은 AI·컴퓨터 비전·AR·모바일 앱을 개발하는 IT 기업입니다.",
   "dir": "ltr",
   "lang": "ko-KR"
 }
